@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout android:layout_height="match_parent" android:layout_width="match_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+<LinearLayout
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.domenicoangilletta.popularmovies.MovieDetails"
+    android:orientation="vertical"
+    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+    android:layout_marginRight="@dimen/activity_horizontal_margin"
+    >
     <ScrollView android:layout_height="match_parent" android:layout_width="match_parent"
         xmlns:android="http://schemas.android.com/apk/res/android">
         <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -10,42 +18,53 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             tools:context="com.domenicoangilletta.popularmovies.MovieDetails"
-            android:orientation="vertical"
-            android:padding="16dp"
-            >
+            android:orientation="vertical">
+            <!--android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:layout_marginTop="@dimen/activity_horizontal_margin" -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/tv_movie_title"
-                android:textSize="20dp"
+                android:textSize="@dimen/movie_title_text_size"
+                android:padding="@dimen/movie_default_padding"
                 android:textStyle="bold"
                 android:textAlignment="center"
+                tools:text="Pulp Fiction"
                 />
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/iv_movie_detail_image"
-                android:padding="16dp"
+                android:padding="@dimen/movie_default_padding"
                 android:layout_gravity="center"
+                tools:layout_width="@dimen/movie_poster_width"
+                tools:layout_height="@dimen/movie_poster_height"
+                tools:background="@color/black"
                 />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/tv_movie_overview"
                 android:textStyle="italic"
-                android:paddingTop="8dp"
+                android:paddingTop="@dimen/movie_default_padding"
+                tools:text="A burger-loving hit man, his philosophical partner, a drug-addled gangster's moll and a washed-up boxer converge in this sprawling, comedic crime caper. Their adventures unfurl in three stories that ingeniously trip back and forth in time."
                 />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/tv_movie_rating"
-                android:paddingTop="8dp" />
+                android:paddingTop="@dimen/movie_default_padding"
+                tools:text="Avg Rating: 8.3"
+                />
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/tv_movie_release_date"
-                android:paddingTop="8dp"/>
-
+                android:paddingTop="@dimen/movie_default_padding"
+                android:paddingBottom="@dimen/movie_default_padding"
+                tools:text="Release Date: 2017-10-15"/>
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

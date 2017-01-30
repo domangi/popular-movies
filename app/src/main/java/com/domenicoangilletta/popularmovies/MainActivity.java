@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity implements MovieAdapter.Movi
     private TextView mSortedBy;
     private MainActivity main_activity;
     private LinkedList<Movie> currentMovies;
-    private String THEMOBIEDB_API_KEY;
+    private final static String THEMOBIEDB_API_KEY = BuildConfig.THEMOVIEDB_API_KEY;
 
     /*
         Grid Item Click Handler
@@ -104,8 +104,6 @@ public class MainActivity extends AppCompatActivity implements MovieAdapter.Movi
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         main_activity = this;
-        THEMOBIEDB_API_KEY = getString(R.string.THEMOVIEDB_API_KEY);
-
         mSortedBy = (TextView) findViewById(R.id.tv_sorted_by);
         sortBy = SORT_BY_POPULAR;
         mMovies = (RecyclerView) findViewById(R.id.rv_movies);

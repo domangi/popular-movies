@@ -3,15 +3,14 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="16dp"
+    android:padding="@dimen/movie_default_padding"
     >
 
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:alpha="1"
         android:id="@+id/iv_movie_image"
-        android:src="@drawable/scilla"
+        android:adjustViewBounds="true"
         />
 
 </FrameLayout>

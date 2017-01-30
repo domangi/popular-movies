@@ -18,7 +18,7 @@ class Movie {
     private String id;
     private String releaseDate;
 
-    private static final String BASE_IMAGE_URL = "http://image.tmdb.org/t/p/";
+        private static final String BASE_IMAGE_URL = "http://image.tmdb.org/t/p/";
 
     /*
         build a new Movie passing all necessary attributes
