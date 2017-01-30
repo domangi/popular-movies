@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Movies</string>
+    <string name="search_by_popularity_menu">Popular</string>
+    <string name="search_by_popularity_label">Sorted by Popularity</string>
+    <string name="search_by_top_rated_menu">Top Rated</string>
+    <string name="search_by_top_rated_label">Sorted by Ratings</string>
+    <string name="avg_rating_label">Avg Rating</string>
+    <string name="release_date_label">Release Date</string>
+</resources>
