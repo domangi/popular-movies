@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_review_content"
+        android:textSize="@dimen/default_text_size"
+        tools:text="Lorem ipsum bla bla bla Lorem ipsum bla bla bla Lorem ipsum bla bla bla
+        Lorem ipsum bla bla bla Lorem ipsum bla bla bla Lorem ipsum bla bla bla Lorem ipsum bla bla bla
+        Lorem ipsum bla bla bla Lorem ipsum bla bla bla Lorem ipsum bla bla bla."
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/default_text_size"
+        android:id="@+id/tv_review_author"
+        tools:text="Mario Rossi"
+        android:textStyle="italic"
+        android:layout_gravity="right"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="***"
+        android:padding="@dimen/movie_default_padding"
+        />
+
+</LinearLayout>

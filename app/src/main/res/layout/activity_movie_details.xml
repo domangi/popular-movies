@@ -1,70 +1,139 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout
-    android:layout_height="match_parent"
+<LinearLayout android:layout_height="match_parent"
     android:layout_width="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.domenicoangilletta.popularmovies.MovieDetails"
-    android:orientation="vertical"
-    android:layout_marginLeft="@dimen/activity_horizontal_margin"
-    android:layout_marginRight="@dimen/activity_horizontal_margin"
-    >
-    <ScrollView android:layout_height="match_parent" android:layout_width="match_parent"
-        xmlns:android="http://schemas.android.com/apk/res/android">
-        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.domenicoangilletta.popularmovies.activities.MovieDetailActivity"
+    android:orientation="vertical">
+
+    <android.support.v4.widget.NestedScrollView android:layout_height="match_parent" android:layout_width="match_parent">
+         <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:tools="http://schemas.android.com/tools"
             android:id="@+id/activity_movie_details"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            tools:context="com.domenicoangilletta.popularmovies.MovieDetails"
+            tools:context="com.domenicoangilletta.popularmovies.activities.MovieDetailActivity"
             android:orientation="vertical">
-            <!--android:layout_marginLeft="@dimen/activity_horizontal_margin"
-            android:layout_marginRight="@dimen/activity_horizontal_margin"
-            android:layout_marginBottom="@dimen/activity_vertical_margin"
-            android:layout_marginTop="@dimen/activity_horizontal_margin" -->
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/tv_movie_title"
-                android:textSize="@dimen/movie_title_text_size"
-                android:padding="@dimen/movie_default_padding"
-                android:textStyle="bold"
-                android:textAlignment="center"
-                tools:text="Pulp Fiction"
-                />
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/iv_movie_detail_image"
-                android:padding="@dimen/movie_default_padding"
-                android:layout_gravity="center"
-                tools:layout_width="@dimen/movie_poster_width"
-                tools:layout_height="@dimen/movie_poster_height"
-                tools:background="@color/black"
-                />
+
+             <TextView
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:padding="@dimen/activity_horizontal_margin"
+                 android:id="@+id/tv_movie_title"
+                 android:textSize="@dimen/movie_title_text_size"
+                 android:fontFamily="cursive"
+                 android:background="@color/colorAccent"
+                 android:textColor="@color/colorPrimaryDark"
+                 tools:text="Pulp Fiction"
+                 />
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:orientation="horizontal">
+                 <ImageView
+                     android:layout_width="wrap_content"
+                     android:layout_height="match_parent"
+                     android:layout_weight="1"
+                     android:id="@+id/iv_movie_detail_image"
+                     android:padding="@dimen/movie_default_padding"
+                     android:layout_gravity="top"
+                     tools:layout_width="@dimen/movie_poster_width"
+                     tools:layout_height="@dimen/movie_poster_height"
+                     tools:background="@color/black"
+                     android:adjustViewBounds="true"
+                     />
+                 <LinearLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="match_parent"
+                     android:padding="@dimen/movie_default_padding"
+                     android:layout_weight="1"
+                     android:orientation="vertical"
+                     >
+                     <TextView
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:id="@+id/tv_movie_release_date"
+                         android:layout_gravity="right"
+                         android:textSize="@dimen/default_text_size"
+                         tools:text="15 Oct 2017"/>
+                     <TextView
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:id="@+id/tv_movie_rating"
+                         android:paddingTop="@dimen/movie_default_padding"
+                         android:textSize="@dimen/default_text_size"
+                         tools:text="Rating: 8.3/10"
+                         />
+                     <Button
+                         android:id="@+id/btn_add_to_bookmarks"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:text="Add to Favourites"
+                         android:textSize="@dimen/default_text_size"
+                         />
+                 </LinearLayout>
+
+
+             </LinearLayout>
+
+
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/tv_movie_overview"
                 android:textStyle="italic"
-                android:paddingTop="@dimen/movie_default_padding"
+                android:padding="@dimen/movie_default_padding"
+                android:textSize="@dimen/default_text_size"
                 tools:text="A burger-loving hit man, his philosophical partner, a drug-addled gangster's moll and a washed-up boxer converge in this sprawling, comedic crime caper. Their adventures unfurl in three stories that ingeniously trip back and forth in time."
                 />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/tv_movie_rating"
-                android:paddingTop="@dimen/movie_default_padding"
-                tools:text="Avg Rating: 8.3"
-                />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/tv_movie_release_date"
-                android:paddingTop="@dimen/movie_default_padding"
-                android:paddingBottom="@dimen/movie_default_padding"
-                tools:text="Release Date: 2017-10-15"/>
-        </LinearLayout>
-    </ScrollView>
+             <TextView
+                 android:id="@+id/tv_trailers_label"
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:text="@string/trailers_title"
+                 android:textSize="@dimen/default_text_size"
+                 android:textStyle="bold"
+                 android:paddingLeft="@dimen/movie_default_padding"
+                 android:paddingTop="@dimen/movie_default_padding"
+                 android:visibility="invisible"
+                 />
+
+             <android.support.v7.widget.RecyclerView
+                 android:id="@+id/rv_movie_trailers"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:paddingLeft="@dimen/movie_default_padding"
+                 android:paddingRight="@dimen/movie_default_padding"
+                 tools:listitem="@layout/movie_trailer_item"
+                 >
+             </android.support.v7.widget.RecyclerView>
+
+             <TextView
+                 android:id="@+id/tv_reviews_label"
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:text="@string/reviews_title"
+                 android:textStyle="bold"
+                 android:textSize="@dimen/default_text_size"
+                 android:paddingLeft="@dimen/movie_default_padding"
+                 android:paddingTop="@dimen/movie_default_padding"
+                 android:visibility="invisible"
+                 />
+
+             <android.support.v7.widget.RecyclerView
+                 android:id="@+id/rv_movie_reviews"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:paddingLeft="@dimen/movie_default_padding"
+                 android:paddingRight="@dimen/movie_default_padding"
+                 tools:listitem="@layout/review_item"
+                 >
+             </android.support.v7.widget.RecyclerView>
+
+         </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
 </LinearLayout>

@@ -1,4 +1,4 @@
-package com.domenicoangilletta.popularmovies;
+package com.domenicoangilletta.popularmovies.adapters;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -6,6 +6,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+
+import com.domenicoangilletta.popularmovies.R;
+import com.domenicoangilletta.popularmovies.models.Movie;
 import com.squareup.picasso.Picasso;
 import java.util.LinkedList;
 
@@ -66,7 +69,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieViewHol
         }
 
         void bind(int index){
-            if(index < mNumberItems && index < movies.size()) {
+            if(index < mNumberItems) {
                 Context context = mMovieThumb.getContext();
                 Movie movie = movies.get(index);
                 String url = movie.getThumbUrl("500");

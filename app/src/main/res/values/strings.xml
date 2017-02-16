@@ -4,6 +4,17 @@
     <string name="search_by_popularity_label">Sorted by Popularity</string>
     <string name="search_by_top_rated_menu">Top Rated</string>
     <string name="search_by_top_rated_label">Sorted by Ratings</string>
-    <string name="avg_rating_label">Avg Rating</string>
+    <string name="search_by_bookmarked_menu">Bookmarked</string>
+    <string name="search_by_bookmarked_label">Bookmarked movies</string>
+    <string name="avg_rating_label">Average Rating</string>
     <string name="release_date_label">Release Date</string>
+    <string name="add_to_bookmarks_label">Add to bookmarks</string>
+    <string name="remove_from_bookmarks_label">Remove from bookmarks</string>
+    <string name="added_to_bookmarks_notification">Movie added to bookmarks</string>
+    <string name="added_to_bookmarks_error">Failed to add to bookmarks</string>
+    <string name="removed_bookmarks_notification">Movie removed from bookmarks</string>
+    <string name="removed_bookmarks_error">Failed to remove from bookmarks</string>
+    <string name="trailers_title">Trailers:</string>
+    <string name="reviews_title">Reviews:</string>
+    <string name="bookmarks_title">Bookmarked Movies</string>
 </resources>
